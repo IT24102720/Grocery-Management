@@ -1,13 +1,5 @@
 package com.grocerymanagement.dao;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
-public class InventoryDAO {
-}
-package com.grocerymanagement.dao;
-
 import com.grocerymanagement.config.FileInitializationUtil;
 import com.grocerymanagement.model.Inventory;
 import com.grocerymanagement.util.FileHandlerUtil;

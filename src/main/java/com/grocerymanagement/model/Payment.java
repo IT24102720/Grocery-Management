@@ -11,4 +11,19 @@ public class Payment implements Serializable {
     private PaymentMethod paymentMethod;
     private PaymentStatus status;
     private LocalDateTime paymentDate;
+
+    public enum PaymentMethod {
+        CREDIT_CARD,
+        DEBIT_CARD,
+        NET_BANKING,
+        DIGITAL_WALLET
+    }
+
+    public enum PaymentStatus {
+        PENDING,
+        SUCCESSFUL,
+        FAILED,
+        REFUNDED
+    }
+
 }

@@ -26,4 +26,20 @@ public class Payment implements Serializable {
         REFUNDED
     }
 
+    public Payment() {
+        this.paymentId = UUID.randomUUID().toString();
+        this.paymentDate = LocalDateTime.now();
+        this.status = PaymentStatus.PENDING;
+    }
+
+    public Payment(Order order, BigDecimal amount, PaymentMethod paymentMethod) {
+        this();
+        this.order = order;
+        this.amount = amount;
+        this.paymentMethod = paymentMethod;
+    }
+
+
+
+
 }

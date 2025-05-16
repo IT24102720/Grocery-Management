@@ -1,6 +1,5 @@
 package com.grocerymanagement.dto;
 
-import com.grocerymanagement.model.Payment;
 import java.io.Serializable;
 
 public class PaymentDetails implements Serializable {

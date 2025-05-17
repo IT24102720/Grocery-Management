@@ -61,6 +61,31 @@ public class PaymentServlet extends HttpServlet {
     }
 
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String pathInfo = request.getPathInfo();
+
+        if(pathInfo == null) {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            return;
+        }
+
+        switch(pathInfo) {
+            case "/process":
+                processPayment(request, response);
+                break;
+            case "/save-card":
+                savePaymentCard(request, response);
+                break;
+            case "/delete-card":
+                deletePaymentCard(request, response);
+                break;
+            default:
+                response.sendError(HttpServletResponse.SC_NOT_FOUND);
+                break;
+        }
+    }
 
 
 

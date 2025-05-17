@@ -27,5 +27,14 @@ public class PaymentServlet extends HttpServlet {
     private OrderDAO orderDAO;
     private CartDAO cartDAO;
 
+    @Override
+    public void init() throws ServletException {
+        FileInitializationUtil fileInitUtil = new FileInitializationUtil(getServletContext());
+        orderDAO = new OrderDAO(fileInitUtil);
+        paymentDAO = new PaymentDAO(fileInitUtil, orderDAO);
+        cartDAO = new CartDAO(fileInitUtil);
+    }
+
+
 
 }

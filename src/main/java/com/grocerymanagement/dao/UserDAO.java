@@ -1,11 +1,9 @@
 package com.grocerymanagement.dao;
 
-import com.grocerymanagement.config.FileInitializationUtil;
 import com.grocerymanagement.model.User;
 import com.grocerymanagement.util.FileHandlerUtil;
 import com.grocerymanagement.util.ValidationUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

@@ -1,4 +1,28 @@
 package com.grocerymanagement.servlet;
 
-public class PaymentServlet {
-}
+import com.grocerymanagement.config.FileInitializationUtil;
+import com.grocerymanagement.dao.OrderDAO;
+import com.grocerymanagement.dao.PaymentDAO;
+import com.grocerymanagement.model.Order;
+import com.grocerymanagement.model.Payment;
+import com.grocerymanagement.model.User;
+import com.grocerymanagement.dto.PaymentDetails;
+import com.grocerymanagement.model.Cart;
+import java.util.Optional;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.List;
+import com.grocerymanagement.dao.CartDAO;
+
+@WebServlet("/payment/*")
+public class PaymentServlet extends HttpServlet {
+    private PaymentDAO paymentDAO;
+    private OrderDAO orderDAO;
+    private CartDAO cartDAO;

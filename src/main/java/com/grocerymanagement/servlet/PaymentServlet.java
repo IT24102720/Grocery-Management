@@ -35,6 +35,35 @@ public class PaymentServlet extends HttpServlet {
         cartDAO = new CartDAO(fileInitUtil);
     }
 
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String pathInfo = request.getPathInfo();
+
+        if(pathInfo == null) {
+            pathInfo = "/checkout";
+        }
+
+        switch(pathInfo) {
+            case "/checkout":
+                showCheckoutPage(request, response);
+                break;
+            case "/success":
+                showPaymentSuccess(request, response);
+                break;
+            case "/saved-cards":
+                showSavedCards(request, response);
+                break;
+            default:
+                response.sendRedirect(request.getContextPath() + "/cart/view");
+                break;
+        }
+    }
+
+
+
+
+
 
 
 }

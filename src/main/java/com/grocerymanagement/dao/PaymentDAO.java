@@ -19,9 +19,9 @@ public class PaymentDAO {
     private OrderDAO orderDAO;
 
     public PaymentDAO(FileInitializationUtil fileInitUtil, OrderDAO orderDAO) {
-        this.paymentFilePath = fileInitUtil.getDataFilePath("payments.txt");
-        this.savedCardsFilePath = fileInitUtil.getDataFilePath("saved_cards.txt");
-        this.orderDAO = orderDAO;
+        this.paymentFilePath = fileInitUtil.getDataFilePath("payments.txt");// Get the full file path for "payments.txt" and store it in paymentFilePath
+        this.savedCardsFilePath = fileInitUtil.getDataFilePath("saved_cards.txt");// Get the full file path for "saved_cards.txt" and store it in savedCardsFilePath
+        this.orderDAO = orderDAO;// Store the passed OrderDAO object in this class to access order data when needed
     }
 
     public boolean createPayment(Payment payment) {

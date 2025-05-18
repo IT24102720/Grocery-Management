@@ -33,6 +33,7 @@ public class PaymentDAO {
         return true;
     }
 
+    //Searches for a payment in the file that matches a specific orderId
     public Optional<Payment> getPaymentByOrderId(String orderId) {
         return FileHandlerUtil.readFromFile(paymentFilePath).stream()
                 .filter(line -> line.split("\\|")[1].equals(orderId))

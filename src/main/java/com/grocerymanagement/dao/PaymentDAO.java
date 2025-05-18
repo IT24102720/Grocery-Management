@@ -1,4 +1,4 @@
-package com.grocerymanagement.dao;
+package c                   om.grocerymanagement.dao;
 
 import com.grocerymanagement.config.FileInitializationUtil;
 import com.grocerymanagement.dto.PaymentDetails;
@@ -46,6 +46,7 @@ public class PaymentDAO {
                 .findFirst();
     }
 
+    //Get all payments in the file.
     public List<Payment> getAllPayments() {
         return FileHandlerUtil.readFromFile(paymentFilePath).stream()
                 .map(line -> {
@@ -58,6 +59,7 @@ public class PaymentDAO {
                 .collect(Collectors.toList());
     }
 
+    //Get payments with a specific status.
     public List<Payment> getPaymentsByStatus(Payment.PaymentStatus status) {
         return FileHandlerUtil.readFromFile(paymentFilePath).stream()
                 .filter(line -> line.split("\\|")[4].equals(status.name()))

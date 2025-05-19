@@ -3,7 +3,6 @@ package com.grocerymanagement.servlet;
 import com.grocerymanagement.config.FileInitializationUtil;
 import com.grocerymanagement.dao.UserDAO;
 import com.grocerymanagement.model.User;
-import com.grocerymanagement.util.SecurityUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

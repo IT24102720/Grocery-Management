@@ -1,7 +1,6 @@
 package com.grocerymanagement.dao;
 
 import com.grocerymanagement.model.User;
-import com.grocerymanagement.util.FileHandlerUtil;
 import com.grocerymanagement.util.ValidationUtil;
 
 import java.util.List;

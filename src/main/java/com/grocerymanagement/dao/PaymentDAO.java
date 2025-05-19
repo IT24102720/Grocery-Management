@@ -1,4 +1,4 @@
-package c                   om.grocerymanagement.dao;
+package com.grocerymanagement.dao;
 
 import com.grocerymanagement.config.FileInitializationUtil;
 import com.grocerymanagement.dto.PaymentDetails;

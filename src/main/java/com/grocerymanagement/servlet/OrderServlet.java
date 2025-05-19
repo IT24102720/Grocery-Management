@@ -1,7 +1,6 @@
 package com.grocerymanagement.servlet;
 
 import com.grocerymanagement.config.FileInitializationUtil;
-import com.grocerymanagement.dao.CartDAO;
 import com.grocerymanagement.dao.OrderDAO;
 import com.grocerymanagement.dao.ProductDAO;
 import com.grocerymanagement.dao.UserDAO;
@@ -17,12 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
